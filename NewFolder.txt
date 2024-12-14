@@ -1,0 +1,34 @@
+try
+	-- Finderアプリケーションを対象にする
+	tell application "Finder"
+		-- アクティブなFinderウインドウの選択項目を取得
+		set selectedItems to selection
+
+		-- 選択されているかチェック
+		if length of selectedItems is 0 then
+			error "フォルダを選択してください。"
+		end if
+
+		-- 選択項目がフォルダか確認
+		set selectedFolder to item 1 of selectedItems
+		if kind of selectedFolder is not "フォルダ" then
+			error "選択した項目はフォルダではありません。"
+		end if
+
+		-- フォルダのパスを取得
+		set folderPath to selectedFolder as alias
+
+		-- 新しいフォルダを作成
+		--"yourNameFolder（好きな名前に書き換えてください）" にお好みのフォルダ名を設定してください。
+		set newFolderName to "yourNameFolder（好きな名前に書き換えてください）"
+		if not (exists folder (newFolderName) of folderPath) then
+			make new folder at folderPath with properties {name:newFolderName}
+			display dialog "フォルダ『_没・済』を作成しました。" buttons {"OK"} default button "OK"
+		else
+			error "フォルダ『佐々木』は既に存在します。"
+		end if
+	end tell
+on error errMsg
+	-- エラーメッセージの表示
+	display dialog "エラー: " & errMsg buttons {"OK"} default button "OK"
+end try
