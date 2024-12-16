@@ -12,8 +12,10 @@ tell application "Finder"
 		-- アクティブなFinderウインドウで選択されている項目を取得
 		set theSelection to selection
 
-		--"yourNameFolder（好きな名前に書き換えてください）" にお好みのフォルダ名を設定してください。
-		set newFolderName to "yourNameFolder（好きな名前に書き換えてください）"
+		-- =======================================
+		--"　" 内をお好みのフォルダ名を設定してください。
+		set newFolderName to "没・済"
+		-- =======================================
 
 		if theSelection ≠ {} then
 			-- 何かが選択されている場合
