@@ -23,7 +23,7 @@ try
 		set newFolderName to "yourNameFolder（好きな名前に書き換えてください）"
 		if not (exists folder (newFolderName) of folderPath) then
 			make new folder at folderPath with properties {name:newFolderName}
-			display dialog "フォルダ『_没・済』を作成しました。" buttons {"OK"} default button "OK"
+			-- display dialog "フォルダ『yourNameFolder（好きな名前に書き換えてください）』を作成しました。" buttons {"OK"} default button "OK"
 		else
 			error "フォルダ『佐々木』は既に存在します。"
 		end if
