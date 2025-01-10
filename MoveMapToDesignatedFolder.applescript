@@ -1,92 +1,98 @@
 (*
-åˆ¶ä½œæ—¥ï¼š2024.01.10
-åˆ¶ä½œè€…ï¼šIsao Sasaki
+§ì“úF2024.01.10
+§ìÒFIsao Sasaki
 
-æ©Ÿèƒ½æ¦‚è¦ï¼š
-1. æŒ‡å®šãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰"-åœ°å›³ol.ai"ã§çµ‚ã‚ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ¤œç´¢
-2. æ¤œç´¢ã—ãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’åº—èˆ—åœ°å›³ãƒ•ã‚©ãƒ«ãƒ€ã¸ç§»å‹•ï¼ˆä¸Šæ›¸ãå¯ï¼‰
+‹@”\ŠT—vF
+1. w’èƒtƒHƒ‹ƒ_‚©‚ç"-’n}ol.ai"‚ÅI‚í‚éƒtƒ@ƒCƒ‹‚ğŒŸõ
+2. ŒŸõ‚µ‚½ƒtƒ@ƒCƒ‹‚ğ“X•Ü’n}ƒtƒHƒ‹ƒ_‚ÖˆÚ“®iã‘‚«‰Âj
 
-å‡¦ç†ãƒ•ãƒ­ãƒ¼ï¼š
-1. ãƒ•ã‚©ãƒ«ãƒ€é¸æŠãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’è¡¨ç¤ºï¼ˆãƒ‡ãƒ•ã‚©ãƒ«ãƒˆï¼šãƒãƒ©ã‚·å¿µæ ¡éƒ¨å±‹ï¼‰
-2. é¸æŠãƒ•ã‚©ãƒ«ãƒ€å†…ã®ãƒ•ã‚¡ã‚¤ãƒ«æ¤œç´¢ï¼ˆã‚µãƒ–ãƒ•ã‚©ãƒ«ãƒ€å«ã‚€ï¼‰
-3. æ¤œç´¢çµæœã«å¿œã˜ãŸã‚¢ãƒ©ãƒ¼ãƒˆè¡¨ç¤º
-   - 0ä»¶ï¼šå‡¦ç†ä¸­æ­¢
-   - 1ä»¶ä»¥ä¸Šï¼šç§»å‹•ç¢ºèª
-4. ç¢ºèªOKã§åº—èˆ—åœ°å›³ãƒ•ã‚©ãƒ«ãƒ€ã¸ç§»å‹•
-5. å®Œäº†ã‚¢ãƒ©ãƒ¼ãƒˆè¡¨ç¤º
+ˆ—ƒtƒ[F
+1. ƒtƒHƒ‹ƒ_‘I‘ğƒ_ƒCƒAƒƒO‚ğ•\¦iƒfƒtƒHƒ‹ƒgFƒ`ƒ‰ƒV”OZ•”‰®j
+2. ‘I‘ğƒtƒHƒ‹ƒ_“à‚Ìƒtƒ@ƒCƒ‹ŒŸõiƒTƒuƒtƒHƒ‹ƒ_ŠÜ‚Şj
+3. ŒŸõŒ‹‰Ê‚É‰‚¶‚½ƒAƒ‰[ƒg•\¦
+   - 0ŒFˆ—’†~
+   - 1ŒˆÈãFˆÚ“®Šm”F
+4. Šm”FOK‚Å“X•Ü’n}ƒtƒHƒ‹ƒ_‚ÖˆÚ“®
+5. Š®—¹ƒAƒ‰[ƒg•\¦
 
-ã‚¨ãƒ©ãƒ¼å‡¦ç†ï¼š
-- ç§»å‹•å…ˆãƒ•ã‚©ãƒ«ãƒ€æœªæ¥ç¶šæ™‚ã¯ã‚¨ãƒ©ãƒ¼ã‚¢ãƒ©ãƒ¼ãƒˆ
-- ãƒ•ã‚¡ã‚¤ãƒ«ç§»å‹•æ™‚ã®ã‚¨ãƒ©ãƒ¼ã‚’ã‚­ãƒ£ãƒƒãƒã—ã¦è¡¨ç¤º
+ƒGƒ‰[ˆ—F
+- ˆÚ“®æƒtƒHƒ‹ƒ_–¢Ú‘±‚ÍƒGƒ‰[ƒAƒ‰[ƒg
+- ƒtƒ@ƒCƒ‹ˆÚ“®‚ÌƒGƒ‰[‚ğƒLƒƒƒbƒ`‚µ‚Ä•\¦
 *)
 
--- ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ•ã‚©ãƒ«ãƒ€ã®ãƒ‘ã‚¹ã‚’è¨­å®š
-set defaultPath to "/Users/i-sasaki/Desktop/â˜…â˜…â˜…S_ä½œæ¥­å ´æ‰€/â˜…ãƒãƒ©ã‚·å¿µæ ¡éƒ¨å±‹"
-set destinationPath to "/Volumes/Syng/æ–°åº—_å†ã‚ªãƒ¼ãƒ—ãƒ³_ã”æ„›é¡§ãƒãƒ©ã‚·/99_ä½¿ç”¨ç”»åƒã¨ãƒªãƒ³ã‚¯ç”¨AI/03_åº—èˆ—åœ°å›³"
+-- ƒfƒtƒHƒ‹ƒgƒtƒHƒ‹ƒ_‚ÌƒpƒX‚ğİ’è
+set defaultPath to "/Users/i-sasaki/Desktop/šššS_ì‹ÆêŠ/šƒ`ƒ‰ƒV”OZ•”‰®"
+set destinationPath to "/Volumes/Syng/V“X_ÄƒI[ƒvƒ“_‚²ˆ¤ŒÚƒ`ƒ‰ƒV/99_g—p‰æ‘œ‚ÆƒŠƒ“ƒN—pAI/03_“X•Ü’n}"
 
--- ç§»å‹•å…ˆãƒ•ã‚©ãƒ«ãƒ€ã®å­˜åœ¨ç¢ºèª
+-- ˆÚ“®æƒtƒHƒ‹ƒ_‚Ì‘¶İŠm”F
 try
-    tell application "Finder"
-        if not (exists folder destinationPath as POSIX file) then
-            display alert "03_åº—èˆ—åœ°å›³ãƒ•ã‚©ãƒ«ãƒ€ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚ã‚µãƒ¼ãƒãƒ¼æ¥ç¶šã—ã¦å†åº¦å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚"
-            return
-        end if
-    end tell
+	tell application "Finder"
+		if not (exists folder destinationPath as POSIX file) then
+			display alert "03_“X•Ü’n}ƒtƒHƒ‹ƒ_‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñBƒT[ƒo[Ú‘±‚µ‚ÄÄ“xÀs‚µ‚Ä‚­‚¾‚³‚¢B"
+			return
+		end if
+	end tell
 on error
-    display alert "03_åº—èˆ—åœ°å›³ãƒ•ã‚©ãƒ«ãƒ€ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚ã‚µãƒ¼ãƒãƒ¼æ¥ç¶šã—ã¦å†åº¦å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚"
-    return
+	display alert "03_“X•Ü’n}ƒtƒHƒ‹ƒ_‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñBƒT[ƒo[Ú‘±‚µ‚ÄÄ“xÀs‚µ‚Ä‚­‚¾‚³‚¢B"
+	return
 end try
 
--- ãƒ•ã‚©ãƒ«ãƒ€é¸æŠãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’è¡¨ç¤º
+-- ƒtƒHƒ‹ƒ_‘I‘ğƒ_ƒCƒAƒƒO‚ğ•\¦
 try
-    set selectedFolder to choose folder with prompt "ãƒ•ã‚©ãƒ«ãƒ€ã‚’é¸æŠã—ã¦ãã ã•ã„" default location (POSIX file defaultPath)
+	set selectedFolder to choose folder with prompt "ƒtƒHƒ‹ƒ_‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢" default location (POSIX file defaultPath)
 on error
-    display alert "ãƒ•ã‚©ãƒ«ãƒ€ã®é¸æŠãŒã‚­ãƒ£ãƒ³ã‚»ãƒ«ã•ã‚Œã¾ã—ãŸã€‚"
-    return
+	display alert "ƒtƒHƒ‹ƒ_‚Ì‘I‘ğ‚ªƒLƒƒƒ“ƒZƒ‹‚³‚ê‚Ü‚µ‚½B"
+	return
 end try
 
--- é¸æŠã•ã‚ŒãŸãƒ•ã‚©ãƒ«ãƒ€å†…ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å†å¸°çš„ã«æ¤œç´¢
+-- ‘I‘ğ‚³‚ê‚½ƒtƒHƒ‹ƒ_“à‚Ìƒtƒ@ƒCƒ‹‚ğÄ‹A“I‚ÉŒŸõ
 tell application "Finder"
-    try
-        set mapFiles to (every file of entire contents of selectedFolder whose name ends with "-åœ°å›³ol.ai")
-        set fileCount to count of mapFiles
+	try
+		set mapFiles to (every file of entire contents of selectedFolder whose name ends with "-’n}ol.ai")
+		set fileCount to count of mapFiles
 
-        -- æ¤œç´¢çµæœã«å¿œã˜ã¦ã‚¢ãƒ©ãƒ¼ãƒˆã‚’è¡¨ç¤º
-        if fileCount is 0 then
-            display alert "è©²å½“ãƒ•ã‚¡ã‚¤ãƒ«ã¯0å€‹ãªã®ã§ä½•ã‚‚ã›ãˆã¸ã‚“ã§ã€‚"
-            return
-        else
-            set alertResult to display alert ("è©²å½“ãƒ•ã‚¡ã‚¤ãƒ«ã¯" & fileCount & "å€‹") message "ã€æ³¨æ„ã€‘åŒåãƒ•ã‚¡ã‚¤ãƒ«ã¯ä¸Šæ›¸ãã—ã¾ã™ã€‚åº—èˆ—åœ°å›³ãƒ•ã‚©ãƒ«ãƒ€ã¸ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆï¼" buttons {"ã‚­ãƒ£ãƒ³ã‚»ãƒ«", "OK"} default button "OK" cancel button "ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
+		-- ŒŸõŒ‹‰Ê‚É‰‚¶‚ÄƒAƒ‰[ƒg‚ğ•\¦
+		if fileCount is 0 then
+			display alert "ŠY“–ƒtƒ@ƒCƒ‹‚Í0ŒÂ‚È‚Ì‚Å‰½‚à‚¹‚¦‚Ö‚ñ‚ÅB"
+			return
+		else
+			set alertResult to display alert ("ŠY“–ƒtƒ@ƒCƒ‹‚Í" & fileCount & "ŒÂ") message "y’ˆÓz“¯–¼ƒtƒ@ƒCƒ‹‚Íã‘‚«‚µ‚Ü‚·B“X•Ü’n}ƒtƒHƒ‹ƒ_‚ÖƒGƒNƒXƒ|[ƒgI" buttons {"ƒLƒƒƒ“ƒZƒ‹", "OK"} default button "OK" cancel button "ƒLƒƒƒ“ƒZƒ‹"
 
-            if button returned of alertResult is "OK" then
-                -- ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç§»å‹•
-                set errorFiles to {}
-                repeat with aFile in mapFiles
-                    try
-                        move aFile to POSIX file destinationPath with replacing
-                    on error errorMessage
-                        set end of errorFiles to (name of aFile) & ": " & errorMessage
-                    end try
-                end repeat
+			if button returned of alertResult is "OK" then
+				-- ƒtƒ@ƒCƒ‹‚ğˆÚ“®
+				set errorFiles to {}
+				repeat with aFile in mapFiles
+					try
+						move aFile to POSIX file destinationPath with replacing
+					on error errorMessage
+						set end of errorFiles to (name of aFile) & ": " & errorMessage
+					end try
+				end repeat
 
-                -- ã‚¨ãƒ©ãƒ¼ã®æœ‰ç„¡ã«å¿œã˜ãŸã‚¢ãƒ©ãƒ¼ãƒˆè¡¨ç¤º
-                if (count of errorFiles) > 0 then
-                    set errorList to join of errorFiles with return
-                    display alert "ä¸€éƒ¨ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®ç§»å‹•ã«å¤±æ•—ã—ã¾ã—ãŸã€‚" message errorList
-                else
-                    display alert "åº—èˆ—åœ°å›³ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆå®Œäº†"
-                end if
-            end if
-        end if
-    on error errorMessage
-        display alert "ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚" message errorMessage
-    end try
+				-- ƒGƒ‰[‚Ì—L–³‚É‰‚¶‚½ˆ—
+				if (count of errorFiles) > 0 then
+					set errorList to join of errorFiles with return
+					display alert "ˆê•”‚Ìƒtƒ@ƒCƒ‹‚ÌˆÚ“®‚É¸”s‚µ‚Ü‚µ‚½B" message errorList
+				else
+					-- ƒGƒ‰[‚ª‚È‚¢ê‡‚Ì‚İA‘I‘ğƒtƒHƒ‹ƒ_‚ğƒSƒ~” ‚ÖˆÚ“®
+					try
+						move selectedFolder to trash
+						display alert "“X•Ü’n}ƒGƒNƒXƒ|[ƒgŠ®—¹"
+					on error errorMessage
+						display alert "“X•Ü’n}ƒGƒNƒXƒ|[ƒgŠ®—¹" message "‚½‚¾‚µA‘I‘ğƒtƒHƒ‹ƒ_‚ÌƒSƒ~” ‚Ö‚ÌˆÚ“®‚É¸”s‚µ‚Ü‚µ‚½B"
+					end try
+				end if
+			end if
+		end if
+	on error errorMessage
+		display alert "ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B" message errorMessage
+	end try
 end tell
 
--- ãƒªã‚¹ãƒˆçµåˆç”¨ã®ãƒãƒ³ãƒ‰ãƒ©
+-- ƒŠƒXƒgŒ‹‡—p‚Ìƒnƒ“ƒhƒ‰
 on join of theList with delimiter
-    set AppleScript's text item delimiters to delimiter
-    set theString to theList as string
-    set AppleScript's text item delimiters to ""
-    return theString
+	set AppleScript's text item delimiters to delimiter
+	set theString to theList as string
+	set AppleScript's text item delimiters to ""
+	return theString
 end join
